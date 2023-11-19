@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "padaria-delivery"
+version = "0.1.0"
+description = "Desenvolvimento web com Django Framework para uma padaria."
+authors = ["Geovane Carvalho"]
+license = "Open Source"
+readme = "README.md"
+packages = [{include = "padaria_delivery"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+django = "^4.2.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
