@@ -4,9 +4,9 @@ Este projeto é desenvolvido com liguagem de programação Python e Framework Dj
 
 # Requisitos
 
-1. [Python 3.8.10](https://www.python.org/downloads/release/python-3810/)
-2. [Django 4.2.7](https://www.djangoproject.com/) 
-2. [Poetry](https://python-poetry.org/docs/basic-usage/)
+1. [Python 3.8.10](https://www.python.org/downloads/release/python-3810/){:target="_blank"}
+2. [Django 4.2.7](https://www.djangoproject.com/){:target="_blank"} 
+2. [Poetry](https://python-poetry.org/docs/basic-usage/){:target="_blank"}
 
 # Como desenvolver?
 
@@ -17,5 +17,5 @@ Este projeto é desenvolvido com liguagem de programação Python e Framework Dj
 5. Efetuar as migrações
 5. Rode os testes
 6. Rode a aplicação.
-
+s
 
