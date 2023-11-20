@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import ClientModel, ProductModel, SaleModel
 
-# Register your models here.
+admin.site.register(ClientModel)
+admin.site.register(ProductModel)
+admin.site.register(SaleModel)
+

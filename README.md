@@ -17,5 +17,5 @@ Este projeto é desenvolvido com liguagem de programação Python e Framework Dj
 5. Efetuar as migrações
 5. Rode os testes
 6. Rode a aplicação.
-s
+
 
