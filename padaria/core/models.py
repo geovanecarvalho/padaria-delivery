@@ -26,7 +26,7 @@ class ClientModel(models.Model):
 class ProductModel(models.Model):
     image = models.URLField("Imagem")
     name = models.CharField("Nome", max_length=254)
-    amount = models.IntegerField("Quantidade")
+    amount = models.PositiveIntegerField("Quantidade")
     value = models.DecimalField("Valor", max_digits=10, decimal_places=2)
     description = models.TextField("Descrição", blank=True)
     created_at = models.DateTimeField("Criado em",auto_now_add=True)
@@ -36,7 +36,7 @@ class ProductModel(models.Model):
     class Meta:
         verbose_name = "Produto"
         verbose_name_plural = "Produtos"
-        ordering = ['name']
+        ordering = ['id']
 
 
     def __str__(self):
@@ -45,8 +45,8 @@ class ProductModel(models.Model):
 
 # Tabela de Vendas
 class SaleModel(models.Model):
-    order_number = models.IntegerField("Número de Pedido")
-    amount = models.IntegerField("Quantidade")
+    order_number = models.CharField("Número de Pedido", max_length=4)
+    amount_buy = models.PositiveIntegerField("Quantidade")
     client = models.ForeignKey(ClientModel, 
                                verbose_name="Cliente", 
                                on_delete=models.CASCADE, 
@@ -59,7 +59,7 @@ class SaleModel(models.Model):
                                 related_name="ordereds", 
                                 null=True, 
                                 blank=True)
-    created_at = models.DateTimeField("Criado em",auto_now_add=True)
+    sale_created_at = models.DateTimeField("Vendido em",auto_now_add=True)
 
     class Meta:
         verbose_name = "Venda"
@@ -67,6 +67,7 @@ class SaleModel(models.Model):
         ordering = ['order_number']
 
     def __str__(self):
-        return "Número de pedido: " + str(self.order_number)
+        return "Número de pedido: " + self.order_number
     
     
+
