@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container m-3" style="border: 3px solid #0b5ed7;">
+    <div class="row m-4">
+        <div class="col-6">
+            <h3>Cadastro de produtos</h3>
+            <form method="POST">
+                <div class="row">
+                  <div class="row m-2">
+
+                    {{form.image}}
+                  </div>
+                  <div class="row m-2">
+                    {{form.name}}
+                  </div>
+                  <div class="row m-2">
+                    {{form.amount}}
+                  </div>
+
+                  <div class="row m-2">
+                    {{form.value}}
+                  </div>
+                  <div class="row m-2">
+                    {{form.description}}
+                  </div>
+                </div>
+                <button class="btn btn-secondary" >Limpar</button>
+                <button class="btn btn-primary" type="submit">Cadastrar</button>
+              </form>
+
+        </div>
+        <div class="col-6">
+            <img src="https://www.mgpconsultoria.com.br/wp-content/uploads/2018/10/Cadastro-de-Clientes-Imagem4.jpg" style="width:500px; margin-top:180px" alt="">
+        </div>
+    </div>
+</div>
+{% endblock content %}
