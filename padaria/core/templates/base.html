@@ -14,12 +14,16 @@
         <div class="row">
             <div class="row p-2 m-3">
 
-                <a href="/" class="navbar-brand d-flex align-items-center text-white">
+                <a href="{% url 'core:home' %}" class="navbar-brand d-flex align-items-center text-white">
                   <strong><h3>Padaria Delivery</h3></strong>
                 </a>
-                <div class="col-5 p-2">
-                    <a href="" class="btn btn-primary m-2">Cadastrar Cliente</a>
-                    <a href="{% url 'core:register'%}" class="btn btn-primary m-2">Cadastrar Produto</a>
+                <div class="col p-2">
+                    <a href="{% url 'core:home' %}" class="btn btn-sm btn-outline-light m-1">HOME</a>
+                    <a href="{% url 'core:register_client' %}" class="btn btn-sm btn-outline-light m-1">CADASTRAR CLIENTE</a>
+                    <a href="{% url 'core:register_product'%}" class="btn btn-sm btn-outline-light m-1">CADASTRAR PRODUTO</a>
+                    <a href="{% url 'core:register_product'%}" class="btn btn-sm btn-outline-light m-1">LISTA DE PEDIDOS</a>
+                    <a href="{% url 'core:product_list'%}" class="btn btn-sm btn-outline-light m-1">ESTOQUE DE PRODUTOS</a>
+
     
                 </div>  
             </div>

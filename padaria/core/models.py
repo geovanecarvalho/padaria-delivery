@@ -51,12 +51,13 @@ class ProductModel(models.Model):
 class SaleModel(models.Model):
     order_number = models.CharField("Número de Pedido", max_length=4)
     amount_buy = models.PositiveIntegerField("Quantidade")
+    total = models.DecimalField("Total", max_digits=10, decimal_places=2, null=True, blank=True)
     client = models.ForeignKey(ClientModel, 
                                verbose_name="Cliente", 
                                on_delete=models.CASCADE, 
                                related_name="ordereds", 
-                               null=True, 
-                               blank=True)
+                             
+                               )
     product = models.ForeignKey(ProductModel, 
                                 verbose_name="Produto", 
                                 on_delete=models.CASCADE, 

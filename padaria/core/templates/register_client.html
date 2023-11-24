@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container m-3">
+    <div class="row m-4">
+        <div class="col-6">
+          <form method="POST">
+            <div class="row p-3"style="border: 1px solid #212529; box-shadow: 10px 5px 10px #212529;">
+                  <h3 class="text-center">Cadastro de Clientes</h3>
+                  <div class="row m-2">
+
+                    {{form.image}}
+                  </div>
+                  <div class="row m-2">
+                    {{form.name}}
+                  </div>
+                  <div class="row m-2">
+                    {{form.amount}}
+                  </div>
+
+                  <div class="row m-2">
+                    {{form.value}}
+                  </div>
+                  <div class="row m-2">
+                    {{form.description}}
+                  </div>
+                  <button class="btn btn-secondary m-1" >Limpar</button>
+                  <button class="btn btn-primary m-1" type="submit">Cadastrar</button>
+                </div>
+              </form>
+
+        </div>
+       
+    </div>
+</div>
+{% endblock content %}
