@@ -49,28 +49,36 @@ def detail(request, pk):
 
 def wish_list(request):
     sale = SaleModel.objects.all()
-    return render(request, 'wish_list.html', {'sales': sale })    
-        
+    return render(request, 'wish_list.html', {'sales': sale })          
 
 
 def register_customer(request):
     form = ProductForm()
-   
+    form_product = ProductForm(request.POST)
+
+    if request.method == "POST":
+        if form_product.is_valid():
+            form_product.save()
+            messages.success(request, "Produto cadastrado com sucesso!","alert-success")
+
+        if not form_product.is_valid():
+            messages.success(request, "Error no formulário dados inválido!","alert-danger")
 
     return render(request, 'register_product.html', {"form": form})
 
+
 def register_client(request):
     form = ClientForm()
-    obj = ClientModel()
-    
-    
     form_client = ClientForm(request.POST)
-    if form_client.is_valid():
-        form_client.save()
+
+    if request.method == "POST":
+        if form_client.is_valid():
+            form_client.save()
     
-        messages.success(request, "Cliente cadastrado com sucesso!","alert-success")
-    if not form_client.is_valid():
-        messages.success(request, "Error no formulário dados inválido!","alert-danger")
+            messages.success(request, "Cliente cadastrado com sucesso!","alert-success")
+        
+        if not form_client.is_valid():
+            messages.success(request, "Error no formulário dados inválido!","alert-danger")
         
     return render(request, 'register_client.html', {"form": form})
 

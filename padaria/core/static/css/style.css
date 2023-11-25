@@ -1,0 +1,17 @@
+.container-css{
+    margin-top: 30px;
+    max-width: 400px;
+    padding: 1rem;
+    margin-bottom: 10px;
+    
+    border: 1px solid #212529;
+    box-shadow: 10px 5px 10px #212529;
+    border-radius: 3%;
+  }
+  .footer-bottom{
+  margin-top: 9%;
+  }
+  .container-alert{
+    max-width: 400px;
+    padding: 1rem;
+  }

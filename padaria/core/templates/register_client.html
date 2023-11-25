@@ -2,27 +2,25 @@
 {% block content %}
 <div class="container container-css">
     <div class="row">
-        <div class="col">
-          {%if messages %}
-          {% for message in messages%} 
-          <div class="container container-alert">
-            <div class="row">
-              <div class="col">
-                <div class="alert {{message.tags}}" role="alert">
-                    {{message}}  
-                </div>
-    
-              </div>
-            </div>
-          </div> 
-          {% endfor %}
-          {% endif %}
+        <div class="col">    
           <form method="POST">
             {% csrf_token %}
             <div class="row p-3">
                   <h3 class="text-center">Cadastro de Clientes</h3>
+                  {%if messages %}
+                    {% for message in messages%} 
+                    <div class="container container-alert">
+                      <div class="row">
+                        <div class="col">
+                          <div class="alert {{message.tags}}" role="alert">
+                            {{message}}  
+                          </div>
+                        </div>
+                      </div>
+                    </div> 
+                    {% endfor %}
+                  {% endif %}
                   <div class="row m-2">
-
                     {{form.first_name}}
                   </div>
                   <div class="row m-2">
@@ -31,7 +29,6 @@
                   <div class="row m-2">
                         {{form.date_of_birth}}
                   </div>
-
                   <div class="row m-2">
                     {{form.cpf}}
                   </div>
@@ -41,13 +38,11 @@
                   <div class="row m-2">
                     {{form.address}}
                   </div>
-                  <button class="btn btn-secondary m-1" >Limpar</button>
+                  <button class="btn btn-secondary m-1" onclick="form_client()" >Limpar</button>
                   <button class="btn btn-primary m-1" type="submit">Cadastrar</button>
                 </div>
               </form>
-
         </div>
-       
     </div>
 </div>
 {% endblock content %}

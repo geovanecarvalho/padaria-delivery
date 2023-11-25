@@ -4,10 +4,23 @@
     <div class="row" >
         <div class="col">
           <form method="POST">
+            {% csrf_token %}
             <div class="row p-3" >    
               <h3 class="text-center">Cadastro de Produtos</h3>
+              {%if messages %}
+                    {% for message in messages%} 
+                    <div class="container container-alert">
+                      <div class="row">
+                        <div class="col">
+                          <div class="alert {{message.tags}}" role="alert">
+                            {{message}}  
+                          </div>
+                        </div>
+                      </div>
+                    </div> 
+                    {% endfor %}
+              {% endif %}
                   <div class="row m-2">
-
                     {{form.image}}
                   </div>
                   <div class="row m-2">
@@ -23,7 +36,7 @@
                   <div class="row m-2">
                     {{form.description}}
                   </div>
-                  <button class="btn btn-secondary m-1" >Limpar</button>
+                  <button class="btn btn-secondary m-1" onclick="form_product()">Limpar</button>
                   <button class="btn btn-primary m-1" type="submit">Cadastrar</button>
                 </div>
               </form>
