@@ -1,6 +1,6 @@
 # Projeto Padaria Delivery
 
-Este projeto é desenvolvido com liguagem de programação Python e Framework Django, no intuito como solução melhorar toda a logistica de vendas e entregas de produtos de padaria em modalidade delivery para que as compras sejam agilizada da melhor forma, gerando valor e qualidade tanto para os cliente quanto para o seu proprietário.
+Este projeto é desenvolvido com liguagem de programação Python e Framework Django, no intuito como solução melhorar toda a logistica de vendas e entregas de produtos de padaria em modalidade delivery, para que as compras sejam agilizada da melhor forma, gerando valor e qualidade para todos os usuários.
 
 # Requisitos
 
@@ -11,11 +11,73 @@ Este projeto é desenvolvido com liguagem de programação Python e Framework Dj
 # Como desenvolver?
 
 1. Clone o repositório.
-2. Crie um ambiente vitual.
+2. Instale todas as dependências.
 3. Ative o ambiente virtual.
-4. Instale todas as dependências.
-5. Efetuar as migrações
-5. Rode os testes
-6. Rode a aplicação.
+4. Efetuar as migrações
+5. Rode a aplicação.
 
+# Comandos para rodar o projeto:
 
+Clonar projeto.
+```
+git clone https://github.com/geovanecarvalho/padaria-delivery
+```
+Instalar dependências.
+```
+poetry install
+```
+Ativar ambiente virtual.
+```
+poetry shell
+```
+Fazer migrações das tabelas.
+```
+python manage.py makemigrations
+```
+Fazer migração do banco de dados.
+```
+python manage.py migrate
+```
+Rodar o projeto.
+```
+python manage.py runserver
+```
+Acessar a página no navegado
+[http://localhost:8000](http://localhost:8000)
+
+# Caso não queira utilizar o Poetry como gerencidador de pacotes pode ser usado o PIP.
+
+## Comandos para rodar o projeto
+
+Criar um ambiente virtual.
+```
+python3 -m venv .padaria-delivery
+```
+Ativar ambiente virtual linux.
+```
+./.padaria-delivery/bin/activate
+```
+Ativar ambiente virtual no windows
+```
+./.padaria-delivery/Scripts/Activate
+```
+Instalar todos requerimentos.
+```
+pip install -r requirements.txt
+```
+Fazer migrações das tabelas.
+```
+python manage.py makemigrations
+```
+Fazer migração do banco de dados.
+```
+python manage.py migrate
+```
+Rodar o projeto.
+```
+python manage.py runserver
+```
+
+Acessar a página no navegado
+[http://localhost:8000](http://localhost:8000)
+ 

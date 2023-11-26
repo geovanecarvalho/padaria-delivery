@@ -5,3 +5,4 @@
 staticfiles
 .ipynb_checkpoint/
 .env
+poetry.lock
